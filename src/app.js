@@ -1,17 +1,18 @@
 //// Notes: To run nodemon when you do changes and saves in other than .js files, you have to run this command <nodemon filename.js -e js,other_file_extention>
 
-const express = require('express')
-const path = require('path')
+const express = require('express');
+const path = require('path');
 const hbs = require('hbs');
 const { registerHelper } = require('hbs');
 const geoCode = require('./utils/geoCode');
 const forecast = require('./utils/forecast');
-const app1 = express()   
+const app1 = express();  
+const port = process.env.PORT || 3000;
 
 // Define paths for Express config
 const publicDir1 = path.join(__dirname, '../public');
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialsPath = path.join(__dirname, '../templates/partials')
+const viewsPath = path.join(__dirname, '../templates/views');
+const partialsPath = path.join(__dirname, '../templates/partials');
 
 // Setup handlebars engine and views location
 app1.set('view engine', 'hbs');
@@ -97,6 +98,6 @@ app1.get('*', (req, res) => {
     });
 });
 
-app1.listen(3000, () => {
-    console.log('Server is up on port 3000.');
+app1.listen(port, () => {
+    console.log('Server is up on port '+port);
 })
