@@ -17,7 +17,7 @@ body {
   color: #f5f5f5;
   padding: 8px;
   border-radius: 5px;
-  background: url("../images/hilly2.png") no-repeat center center fixed #000;
+  background: url("../images/valley2.png") no-repeat center center fixed #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -88,4 +88,11 @@ button {
 }
 .btn {
   color: cornsilk;
+}
+p {
+  font-weight: bold;
+  color: #041c32;
+}
+h3 {
+  color: #557b83;
 }
