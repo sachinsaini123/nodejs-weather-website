@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) => {
             console.log(body);
             callback('Unable to find location', undefined);
         } else {
-            callback(undefined, body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degress out. There is a '+body.current.precip+'% chances of rain.');         
+            callback(undefined, body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike +' degrees out. The humadity is '+body.current.humidity+'%. Wind speed is '+body.current.wind_speed+'m/s. Time Zone is '+body.location.timezone_id+'. Localtime is '+body.location.localtime+'.');         
         }
     });
 }
