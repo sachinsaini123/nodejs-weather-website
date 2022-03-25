@@ -96,3 +96,7 @@ p {
 h3 {
   color: #557b83;
 }
+#message-1,
+#message-2 {
+  color: white;
+}
